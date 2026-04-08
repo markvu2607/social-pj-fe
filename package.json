@@ -4,30 +4,34 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
-    "build": "vite build",
+    "build": "tsc && vite build",
+    "lint": "oxlint --deny correctness --deny perf",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "preview": "vite preview",
-    "test": "vitest run"
+    "prepare": "lefthook install"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/router-plugin": "^1.133.21",
     "@tanstack/solid-router": "latest",
-    "@tanstack/solid-router-devtools": "latest",
-    "solid-js": "^1.9.11",
-    "tailwindcss": "^4.1.18",
-    "vite-tsconfig-paths": "^5.1.4"
+    "solid-js": "^1.9.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@tailwindcss/vite": "^4.1.18",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-plugin": "latest",
-    "typescript": "^5.7.2",
+    "@tanstack/solid-router-devtools": "latest",
+    "@types/node": "^25.5.2",
+    "knip": "^6.3.1",
+    "lefthook": "^2.1.5",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^6.0.2",
     "vite": "^7.3.1",
-    "vite-plugin-solid": "^2.11.10"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "lightningcss"
-    ]
+    "vite-plugin-solid": "^2.11.10",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
