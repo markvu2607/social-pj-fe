@@ -1,0 +1,25 @@
+{
+  "indentStyle": "space",
+  "indentWidth": 2,
+  "lineWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    ".git",
+    ".direnv",
+    ".vscode",
+    ".DS_Store",
+    ".env",
+    ".env.example",
+    "flake.lock",
+    "flake.nix",
+    "public"
+  ]
+}
