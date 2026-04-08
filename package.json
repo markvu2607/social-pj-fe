@@ -4,20 +4,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
+    "check": "tsc --noEmit",
     "build": "tsc && vite build",
     "lint": "oxlint --deny correctness --deny perf",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "preview": "vite preview",
-    "prepare": "lefthook install"
+    "prepare": "lefthook install && effect-language-service patch"
   },
   "dependencies": {
     "@tanstack/solid-router": "latest",
+    "effect": "^3.21.0",
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
+    "@effect/language-service": "^0.84.3",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-plugin": "latest",
