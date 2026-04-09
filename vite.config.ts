@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import { devtools } from '@tanstack/devtools-vite'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
-import tailwindcss from '@tailwindcss/vite'
 
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
@@ -14,7 +13,6 @@ export default defineConfig({
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
-    tailwindcss(),
     tanstackRouter({ target: 'solid', autoCodeSplitting: true }),
     solidPlugin(),
   ],
