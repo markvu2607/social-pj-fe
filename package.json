@@ -6,22 +6,27 @@
     "dev": "vite dev --port 3000",
     "check": "tsc --noEmit",
     "build": "tsc && vite build",
+    "preview": "vite preview",
     "lint": "oxlint --deny correctness --deny perf",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "preview": "vite preview",
-    "prepare": "lefthook install && effect-language-service patch"
+    "prepare:lefthook": "lefthook install",
+    "prepare:effect": "effect-language-service patch",
+    "prepare:panda": "panda codegen",
+    "prepare": "bun run --parallel prepare:*"
   },
   "dependencies": {
+    "@ark-ui/solid": "^5.35.0",
     "@tanstack/solid-router": "latest",
     "effect": "^3.21.0",
+    "lucide-solid": "^1.7.0",
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
     "@effect/language-service": "^0.84.3",
-    "@tailwindcss/vite": "^4.1.18",
+    "@pandacss/dev": "^1.9.1",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-plugin": "latest",
     "@tanstack/solid-router-devtools": "latest",
@@ -31,7 +36,6 @@
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.44.0",
     "oxlint": "^1.59.0",
-    "tailwindcss": "^4.1.18",
     "typescript": "^6.0.2",
     "vite": "^7.3.1",
     "vite-plugin-solid": "^2.11.10",

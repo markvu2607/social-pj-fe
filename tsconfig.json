@@ -22,6 +22,12 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
+    "baseUrl": ".", // should remove when panda compatible with Typescript v6
+    "paths": {
+      "~/*": ["src/*"] // should change "src/*" -> "./src/*" when panda compatible with Typescript v6
+    },
+    "ignoreDeprecations": "6.0", // should remove when panda compatible with Typescript v6
+
     "plugins": [
       {
         "name": "@effect/language-service"

@@ -12,3 +12,7 @@ dist-ssr
 __unconfig*
 
 .direnv
+
+## Panda
+styled-system
+styled-system-studio
