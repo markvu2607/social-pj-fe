@@ -1,8 +1,9 @@
+import 'solid-devtools'
 import { render } from 'solid-js/web'
 import { RouterProvider } from '@tanstack/solid-router'
-import { getRouter } from './router'
+import { createRouter } from './router'
 
-const router = getRouter()
+const router = createRouter()
 
 const rootElement = document.getElementById('app')!
 
